@@ -2,26 +2,38 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[hii]]>
+      <![CDATA[Data:UserName]]>
+    </line>
+    <line>
+      <![CDATA[Row:0]]>
+    </line>
+    <line>
+      <![CDATA[Photo:./photo/Thu Sep 27 12_10_24 IST 2018.png]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10321" started-at="2018-09-26T09:58:35Z" finished-at="2018-09-26T09:58:45Z">
+  <suite name="Default suite" duration-ms="14931" started-at="2018-09-27T06:40:12Z" finished-at="2018-09-27T06:40:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10321" started-at="2018-09-26T09:58:35Z" finished-at="2018-09-26T09:58:45Z">
+    <test name="Default test" duration-ms="14931" started-at="2018-09-27T06:40:12Z" finished-at="2018-09-27T06:40:27Z">
       <class name="script.TestDemo">
-        <test-method status="PASS" signature="openApp()[pri:0, instance:script.TestDemo@7d9d1a19]" name="openApp" is-config="true" duration-ms="7931" started-at="2018-09-26T09:58:35Z" finished-at="2018-09-26T09:58:43Z">
+        <test-method status="PASS" signature="openApp()[pri:0, instance:script.TestDemo@1794d431]" name="openApp" is-config="true" duration-ms="10820" started-at="2018-09-27T06:40:12Z" finished-at="2018-09-27T06:40:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method status="PASS" signature="testA()[pri:0, instance:script.TestDemo@7d9d1a19]" name="testA" duration-ms="15" started-at="2018-09-26T09:58:43Z" finished-at="2018-09-26T09:58:43Z">
+        <test-method status="PASS" signature="testA()[pri:0, instance:script.TestDemo@1794d431]" name="testA" duration-ms="1722" started-at="2018-09-27T06:40:23Z" finished-at="2018-09-27T06:40:25Z">
           <reporter-output>
             <line>
-              <![CDATA[hii]]>
+              <![CDATA[Data:UserName]]>
+            </line>
+            <line>
+              <![CDATA[Row:0]]>
+            </line>
+            <line>
+              <![CDATA[Photo:./photo/Thu Sep 27 12_10_24 IST 2018.png]]>
             </line>
           </reporter-output>
         </test-method> <!-- testA -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:script.TestDemo@7d9d1a19]" name="closeApp" is-config="true" duration-ms="2321" started-at="2018-09-26T09:58:43Z" finished-at="2018-09-26T09:58:45Z">
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:script.TestDemo@1794d431]" name="closeApp" is-config="true" duration-ms="2349" started-at="2018-09-27T06:40:25Z" finished-at="2018-09-27T06:40:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
