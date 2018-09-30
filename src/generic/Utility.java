@@ -3,6 +3,8 @@ package generic;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.net.URI;
+import java.net.URL;
 import java.util.Date;
 import java.util.Properties;
 
@@ -12,6 +14,10 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Utility {
 	public static String getPropertyValue(String path,String key) {
@@ -44,7 +50,7 @@ public class Utility {
 	public static String getXLData(String path,String sheet,int r,int c) {
 		String v="";
 		try {
-			Workbook w=WorkbookFactory.create(new FileInputStream(path));
+			Workbook w=WorkbookFactory.create(new FileInputStream(path));//open xl file
 			v=w.getSheet(sheet).getRow(r).getCell(c).toString();
 		}
 		catch(Exception e){
@@ -65,6 +71,7 @@ public class Utility {
 		}
 		return count;
 	}
+	
 	public static String getPhoto(WebDriver driver,String folder) {
 		Date d=new Date();
 		String dateTime=d.toString().replaceAll(":","_");
@@ -85,5 +92,32 @@ public class Utility {
 		
 		
 	}
+	public static WebDriver openBrowser(WebDriver driver,String ip,String browser) {
+	// this method take care localhost and node browser with combination of ip address and browser	
+		if(ip.equals("localhost")) {
+			if(browser.equals("chrome")) {
+				
+				driver=new ChromeDriver();	
+			
+			}//nested if
+			else {
+				driver=new FirefoxDriver();
+			}//nested else
+			
+		}//main if block end 
+		else {
+			try {
+				URL u=new URL("http://"+ip+":4444/wd/hub");
+				DesiredCapabilities d= new DesiredCapabilities();
+				d.setBrowserName(browser);
+				driver=new RemoteWebDriver(u,d);
+			}//try 
+			catch(Exception e) {
+				e.printStackTrace();
+			}//catch
+		}//main else block end
+		
+	return driver;
+	}//open browser method close
 	
 }
