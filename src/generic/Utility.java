@@ -20,6 +20,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Utility {
+ // getPropertyValues:-this method get two arguments 1-path of config.property file; 2-key(global variables)
+// this method return key(global variable given in config file) from config.property file	
 	public static String getPropertyValue(String path,String key) {
 		String v="";
 		try {
@@ -33,7 +35,8 @@ public class Utility {
 		
 		return v;
 	}
-	
+//this method write the passCount and failCount in summary.xl file;
+	//it called in Result(Listener)class inonFinish method to update pass and fail count
 	public static void writeResultToXl(String path,String Sheet,int pass,int fail) {
 		try {
 			Workbook w=WorkbookFactory.create(new FileInputStream(path));
@@ -47,6 +50,7 @@ public class Utility {
 		}	
 	
 	}	
+	// this method fetch the data from input.xl(given path) file and return specific row and column value
 	public static String getXLData(String path,String sheet,int r,int c) {
 		String v="";
 		try {
@@ -59,6 +63,7 @@ public class Utility {
 		return v;
 		
 	}
+// this method return the row count of specific(path based) file
 	public static int getXLRowCount(String path,String sheet) {
 
 		int count =0;
@@ -71,7 +76,7 @@ public class Utility {
 		}
 		return count;
 	}
-	
+	// take the screenshot
 	public static String getPhoto(WebDriver driver,String folder) {
 		Date d=new Date();
 		String dateTime=d.toString().replaceAll(":","_");

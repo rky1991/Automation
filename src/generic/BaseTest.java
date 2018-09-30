@@ -22,8 +22,8 @@ public abstract class BaseTest implements IAutoConst {
 	public long duration= Long.parseLong(ITO);
 	
 	static {
-		System.setProperty(chrome_key,chrome_value);
-		System.setProperty(gecko_key,gecko_value);
+		System.setProperty(CHROME_KEY,CHROME_VALUE);
+		System.setProperty(GECKO_KEY,GECKO_VALUE);
 	}
 	@Parameters({"ip","browser"})
 	@BeforeMethod
@@ -50,7 +50,7 @@ public abstract class BaseTest implements IAutoConst {
 		}
 		
 		
-		//driver.close();
+		driver.close();
 	}
 
 }
