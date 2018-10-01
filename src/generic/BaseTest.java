@@ -26,7 +26,7 @@ public abstract class BaseTest implements IAutoConst {
 		System.setProperty(GECKO_KEY,GECKO_VALUE);
 	}
 	@Parameters({"ip","browser"})
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void openApp(@Optional("localhost")String ip,@Optional("chrome")String browser ) {
 	  //driver=new ChromeDriver();
 	  driver=Utility.openBrowser(driver, ip, browser);	
