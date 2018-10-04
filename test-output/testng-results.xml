@@ -5,18 +5,18 @@
       <![CDATA[Test:testLoginLogoutis Passed & Photo is not Taken at:]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22042" started-at="2018-10-01T06:52:11Z" finished-at="2018-10-01T06:52:33Z">
+  <suite name="Default suite" duration-ms="30751" started-at="2018-10-01T16:17:12Z" finished-at="2018-10-01T16:17:42Z">
     <groups>
       <group name="smoke">
-        <method signature="TestLoginLogOut.testLoginLogout()[pri:1, instance:script.TestLoginLogOut@53b32d7]" name="testLoginLogout" class="script.TestLoginLogOut"/>
+        <method signature="TestLoginLogOut.testLoginLogout()[pri:1, instance:script.TestLoginLogOut@480bdb19]" name="testLoginLogout" class="script.TestLoginLogOut"/>
       </group> <!-- smoke -->
       <group name="login">
-        <method signature="TestLoginLogOut.testLoginLogout()[pri:1, instance:script.TestLoginLogOut@53b32d7]" name="testLoginLogout" class="script.TestLoginLogOut"/>
+        <method signature="TestLoginLogOut.testLoginLogout()[pri:1, instance:script.TestLoginLogOut@480bdb19]" name="testLoginLogout" class="script.TestLoginLogOut"/>
       </group> <!-- login -->
     </groups>
-    <test name="Default test" duration-ms="22042" started-at="2018-10-01T06:52:11Z" finished-at="2018-10-01T06:52:33Z">
+    <test name="Default test" duration-ms="30751" started-at="2018-10-01T16:17:12Z" finished-at="2018-10-01T16:17:42Z">
       <class name="script.TestLoginLogOut">
-        <test-method status="PASS" signature="openApp(java.lang.String, java.lang.String)[pri:0, instance:script.TestLoginLogOut@53b32d7]" name="openApp" is-config="true" duration-ms="11153" started-at="2018-10-01T06:52:11Z" finished-at="2018-10-01T06:52:23Z">
+        <test-method status="PASS" signature="openApp(java.lang.String, java.lang.String)[pri:0, instance:script.TestLoginLogOut@480bdb19]" name="openApp" is-config="true" duration-ms="18964" started-at="2018-10-01T16:17:12Z" finished-at="2018-10-01T16:17:31Z">
           <params>
             <param index="0">
               <value>
@@ -32,15 +32,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method status="PASS" signature="testLoginLogout()[pri:1, instance:script.TestLoginLogOut@53b32d7]" name="testLoginLogout" duration-ms="8733" started-at="2018-10-01T06:52:23Z" finished-at="2018-10-01T06:52:31Z">
+        <test-method status="PASS" signature="testLoginLogout()[pri:1, instance:script.TestLoginLogOut@480bdb19]" name="testLoginLogout" duration-ms="9305" started-at="2018-10-01T16:17:31Z" finished-at="2018-10-01T16:17:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginLogout -->
-        <test-method status="PASS" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.TestLoginLogOut@53b32d7]" name="closeApp" is-config="true" duration-ms="2086" started-at="2018-10-01T06:52:31Z" finished-at="2018-10-01T06:52:33Z">
+        <test-method status="PASS" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.TestLoginLogOut@480bdb19]" name="closeApp" is-config="true" duration-ms="2375" started-at="2018-10-01T16:17:40Z" finished-at="2018-10-01T16:17:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testLoginLogout status=SUCCESS method=TestLoginLogOut.testLoginLogout()[pri:1, instance:script.TestLoginLogOut@53b32d7] output={null}]]]>
+                <![CDATA[[TestResult name=testLoginLogout status=SUCCESS method=TestLoginLogOut.testLoginLogout()[pri:1, instance:script.TestLoginLogOut@480bdb19] output={null}]]]>
               </value>
             </param>
           </params>
