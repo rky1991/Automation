@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="script.TestLoginLogOut">
+      <class name="script.OrangeTC1">
         <methods>
+          <include name="testOrangeTc1"/>
           <include name="openApp"/>
-          <include name="testLoginLogout"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- script.TestLoginLogOut -->
+      </class> <!-- script.OrangeTC1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

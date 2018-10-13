@@ -1,34 +1,34 @@
 package page;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-// Note:- this class done by me no proper POM
-public class LoginPage  {
-
-	//Decleration
+public class LoginPage {
+	// decleration
+	@FindBy(id="txtUsername")
 	private WebElement unTB;
+	@FindBy(id="txtPassword")
 	private WebElement pwTB;
+	@FindBy(id="btnLogin")
 	private WebElement loginBTN;
-    //initilization--
 	
+	//initilization
 	public LoginPage(WebDriver driver) {
-	
-		unTB=driver.findElement(By.id("username"));
-		pwTB=driver.findElement(By.name("pwd"));
-		loginBTN=driver.findElement(By.xpath("//div[.='Login ']"));
+		PageFactory.initElements(driver, this);
+		
 	}
-	
-	//utilization----
-	public void setUserName(String un) {
-		unTB.sendKeys(un);
+	//utilization
+	public void setUserName(String userName) {
+		unTB.sendKeys(userName);
 	}
-	public void setPasword(String pw) {
-		pwTB.sendKeys(pw);
+	public void setPassword(String password) {
+		pwTB.sendKeys(password);
 	}
-	public void clikLogin() {
+	public void clickLogin() {
 		loginBTN.click();
 	}
-	
 
+	
 }

@@ -18,8 +18,13 @@ public abstract class BaseTest implements IAutoConst {
 	public WebDriver driver;
 	
 	String url=Utility.getPropertyValue(CONFIG_PATH, "URL");
-	String ITO=Utility.getPropertyValue(CONFIG_PATH, "ITO");
-	public long duration= Long.parseLong(ITO);
+	String strITO=Utility.getPropertyValue(CONFIG_PATH, "ITO");
+	public long lngITO= Long.parseLong(strITO);
+	
+	String strETO=Utility.getPropertyValue(CONFIG_PATH, "ETO");
+	public long lngETO= Long.parseLong(strETO);
+	
+	
 	
 	static {
 		System.setProperty(CHROME_KEY,CHROME_VALUE);
@@ -30,7 +35,7 @@ public abstract class BaseTest implements IAutoConst {
 	public void openApp(@Optional("localhost")String ip,@Optional("chrome")String browser ) {
 	  //driver=new ChromeDriver();
 	  driver=Utility.openBrowser(driver, ip, browser);	
-	  driver.manage().timeouts().implicitlyWait(duration,TimeUnit.SECONDS);
+	  driver.manage().timeouts().implicitlyWait(lngITO,TimeUnit.SECONDS);
 	  driver.get(url);
 		
 	}
